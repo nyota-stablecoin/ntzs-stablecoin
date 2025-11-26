@@ -1,4 +1,4 @@
-# WrapCBDC stablecoin - cNGN
+# Nyota stablecoin - nTZS
 ## Abstract
 cNGN stands apart as the first regulated stablecoin in Africa. As a fully compliant digital asset, cNGN offers unparalleled trust and transparency, ensuring security for all users, institutions, and businesses.
 
