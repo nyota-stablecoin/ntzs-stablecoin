@@ -1,16 +1,16 @@
 # Nyota stablecoin - nTZS
 ## Abstract
-cNGN stands apart as the first regulated stablecoin in Africa. As a fully compliant digital asset, cNGN offers unparalleled trust and transparency, ensuring security for all users, institutions, and businesses.
+nTZS stands apart as the first regulated stablecoin in Africa. As a fully compliant digital asset, nTZS offers unparalleled trust and transparency, ensuring security for all users, institutions, and businesses.
 
-cNGN, fosters the expansion of fintechs, liquidity providers, and virtual asset entities in Nigeria's digital economy. This initiative is bolstered by regulatory approval under the SEC's Regulatory Incubation (RI) Program, significantly contributing to the growth of Nigeria's digital asset ecosystem.
+nTZS, fosters the expansion of fintechs, liquidity providers, and virtual asset entities in Tanzania's digital economy. This initiative is bolstered by regulatory approval under the SEC's Regulatory Incubation (RI) Program, significantly contributing to the growth of Tanzania's digital asset ecosystem.
 
 ## Architecture Overview
 
-The cNGN stablecoin implementation follows a modular architecture with the following key components:
+The nTZS stablecoin implementation follows a modular architecture with the following key components:
 
 ### Core Components
 
-1. **Cngn Token Contract**: ERC-20 compliant token with additional features for regulatory compliance, including:
+1. **NTZS Token Contract**: ERC-20 compliant token with additional features for regulatory compliance, including:
    - Pausable functionality for emergency situations
    - Role-based access control for administrative functions
    - Blacklisting capabilities for compliance requirements
@@ -28,7 +28,7 @@ The cNGN stablecoin implementation follows a modular architecture with the follo
 
 ### Meta-Transaction Flow
 
-The cNGN implementation supports gasless transactions through the ERC-2771 meta-transaction pattern:
+The nTZS implementation supports gasless transactions through the ERC-2771 meta-transaction pattern:
 
 1. **User Signing**: A user signs a transaction request off-chain with their private key
 2. **Relayer Processing**: A relayer (service provider) submits the signed request to the Forwarder contract
@@ -36,11 +36,11 @@ The cNGN implementation supports gasless transactions through the ERC-2771 meta-
 4. **Transaction Execution**: Upon verification, the Forwarder calls the target function on the token contract
 5. **Context Recovery**: The token contract recovers the original sender's address using the trusted forwarder pattern
 
-This approach allows users to interact with the cNGN token without needing to hold native tokens (ETH, MATIC, etc.) for gas fees.
+This approach allows users to interact with the nTZS token without needing to hold native tokens (ETH, MATIC, etc.) for gas fees.
 
 ### Role Management
 
-The cNGN ecosystem implements a comprehensive role-based access control system:
+The nTZS ecosystem implements a comprehensive role-based access control system:
 
 - **Admin Role**: Can assign other roles and manage system-wide configurations
 - **Minter Role**: Authorized to mint new tokens and manage supply
@@ -50,11 +50,11 @@ The cNGN ecosystem implements a comprehensive role-based access control system:
 Role transitions follow a secure process with appropriate checks and balances to prevent unauthorized access.
 
 ## Blockchain
-cNGN is currently deployed on the following blockchain protocols:
+nTZS is currently deployed on the following blockchain protocols:
 
 ### Main-Nets
 
-| Network | cNGN Contract Address |
+| Network | nTZS Contract Address |
 | ------- | ---------------------- |
 | BANTU   | GD6G2NT7CQHPIYHA52KZHWB6ONNWTSGZOOLTRLRASENM2VWSF6CHYFRX |
 | ASSETCHAIN   | 0x7923C0f6FA3d1BA6EAFCAedAaD93e737Fd22FC4F |
@@ -67,12 +67,12 @@ cNGN is currently deployed on the following blockchain protocols:
 
 ### Test-Nets
 
-| Network    | cNGN Contract Address                                |
+| Network    | nTZS Contract Address                                |
 | ---------- | ---------------------------------------------------- |
 | BANTU      | GAE7E56N3XIC6JGJI54SD3VN4EDY3OZVFA7CLHXAMMTHLU4LIFYJMFSI |
 | ASSETCHAIN | 0x4c00E85cd0B0307D8ED0b5534Bc678776C4aa7D3           |
-| BASE       | 0x929A08903C22440182646Bb450a67178Be402f7f           |
-| BNBCHAIN   | 0x20354A3Ad3B67836ab9c6D7D82cF5e5Ddfe104dD           |
+| BASE       | 0x19398af7cF46aE7e09261F7Cb6fFC441587E8801           |
+| BNBCHAIN   | 0x48811491dA8E32c3F1929202dC7E4F63fF2Bb971           |
 | ETHEREUM   | 0xd076ceCB8af5D92F7f6F32bDf24Da708859593d3           |
 | POLYGON    | 0xf24B1Cee8cA70341FcefBCa10e7e4Db9A4896486           |
 | LISK       | 0x999E3A32eF3F9EAbF133186512b5F29fADB8a816           |
@@ -85,8 +85,8 @@ cNGN is currently deployed on the following blockchain protocols:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/wrappedcbdc/stablecoin-cngn.git
-   cd stablecoin-cngn
+   git clone https://github.com/wrappedcbdc/stablecoin-nTZS.git
+   cd stablecoin-nTZS
    ```
 
 2. Install dependencies:
@@ -131,7 +131,7 @@ The project uses Hardhat for testing. To run the test suite:
 npx hardhat test
 
 # Run specific test file
-npx hardhat test ./test/Cngn.test.js
+npx hardhat test ./test/nTZS.test.js
 
 # Run tests with gas reporting
 REPORT_GAS=true npx hardhat test
@@ -144,11 +144,11 @@ npx hardhat coverage
 
 Tests are organized by contract functionality:
 
-- `Cngn.test.js`: Tests for basic ERC-20 functionality
-- `CngnAdmin.test.js`: Tests for role management and administrative functions
-- `CngnBlacklist.test.js`: Tests for blacklisting functionality
-- `CngnForwarder.test.js`: Tests for meta-transaction functionality
-- `CngnPause.test.js`: Tests for pause/unpause functionality
+- `nTZS.test.js`: Tests for basic ERC-20 functionality
+- `nTZSAdmin.test.js`: Tests for role management and administrative functions
+- `nTZSBlacklist.test.js`: Tests for blacklisting functionality
+- `nTZSForwarder.test.js`: Tests for meta-transaction functionality
+- `nTZSPause.test.js`: Tests for pause/unpause functionality
 
 ### Deployment
 

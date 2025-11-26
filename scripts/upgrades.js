@@ -2,22 +2,22 @@ const { ethers, upgrades } = require("hardhat");
 
 async function main() {
    const proxyAddress = ""; // your proxy address
-   const cngn = await ethers.getContractFactory("Cngn");
+   const ntzs = await ethers.getContractFactory("Ntzs");
    const [deployer] = await ethers.getSigners();
  
    console.log("Deployer Address:", deployer.address);
 
    // First, force import the proxy
    console.log("Importing proxy...");
-  //  await upgrades.forceImport(proxyAddress, cngn, { kind: "transparent" });
+  //  await upgrades.forceImport(proxyAddress, ntzs, { kind: "transparent" });
    
    // Now you can upgrade
-   console.log("Deploying cngn upgrades contract...");
-   const upgradeableCngn = await upgrades.upgradeProxy(proxyAddress, cngn, {
+   console.log("Deploying ntzs upgrades contract...");
+   const upgradeablentzs = await upgrades.upgradeProxy(proxyAddress, ntzs, {
       kind: "transparent"
    });
 
-   console.log("Upgradeable cngn deployed to:", upgradeableCngn.address);
+   console.log("Upgradeable ntzs deployed to:", upgradeablentzs.address);
 }
 
 main()

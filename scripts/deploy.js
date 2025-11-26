@@ -38,11 +38,11 @@ async function main() {
       constructorArguments: [admin.address]
     });
 
-  // Deploy the cngn contract via proxy
-  const cngnContract = await ethers.getContractFactory("Cngn"); // Move this line before calling `deployProxy`
-  console.log("Deploying cngn contract...");
-  const cngn = await upgrades.deployProxy(
-    cngnContract,
+  // Deploy the ntzs contract via proxy
+  const ntzsContract = await ethers.getContractFactory("Ntzs"); // Move this line before calling `deployProxy`
+  console.log("Deploying ntzs contract...");
+  const ntzs = await upgrades.deployProxy(
+    ntzsContract,
     [forwarder.address, admin.address],
     {
       initializer: "initialize",
@@ -51,14 +51,14 @@ async function main() {
     }
   );
 
-  await cngn.deployed();
-  console.log("Upgradeable cngn Contract deployed to:", cngn.address);
+  await ntzs.deployed();
+  console.log("Upgradeable ntzs Contract deployed to:", ntzs.address);
 
     // Automatically verify the Admin proxy implementation
-    const cngnImplementationAddress = await upgrades.erc1967.getImplementationAddress(admin.address);
-    console.log("cNGN Implementation address:", cngnImplementationAddress);
+    const ntzsImplementationAddress = await upgrades.erc1967.getImplementationAddress(admin.address);
+    console.log("ntzs Implementation address:", ntzsImplementationAddress);
   await hre.run("verify:verify", {
-      address: cngnImplementationAddress,
+      address: ntzsImplementationAddress,
       constructorArguments: [forwarder.address,admin.address], 
     });
 }

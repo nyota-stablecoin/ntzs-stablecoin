@@ -50,7 +50,7 @@ contract Forwarder is EIP712, Ownable, Pausable, ReentrancyGuard {
     }
     constructor(
         address _adminOperationsContract
-    ) EIP712("cNGN", "0.0.1") {
+    ) EIP712("nTZS", "0.0.1") {
         _CHAIN_ID = block.chainid;
         _DOMAIN_SEPARATOR = _calculateDomainSeparator();
         adminOperationsContract = _adminOperationsContract;
@@ -60,7 +60,7 @@ contract Forwarder is EIP712, Ownable, Pausable, ReentrancyGuard {
         return keccak256(
             abi.encode(
                 keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"),
-                keccak256(bytes("cNGN")),
+                keccak256(bytes("nTZS")),
                 keccak256(bytes("0.0.1")),
                 block.chainid,
                 address(this)

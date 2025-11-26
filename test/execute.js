@@ -1,6 +1,6 @@
 const ethers = require("ethers");
 require("dotenv").config();
-const cngnabi = require('./cngnabi');
+const ntzsabi = require('./ntzsabi');
 const abi = require('./abi');
 
 const execute = async () => {
@@ -21,7 +21,7 @@ const execute = async () => {
         const parsedAmount = ethers.utils.parseUnits("5000000", 6);
         const functionArgs = [parsedAmount, ""];
 
-        const tokenContract = new ethers.Contract(process.env.CNGN_CONTRACT, cngnabi.cngnabi, signer);
+        const tokenContract = new ethers.Contract(process.env.NTZS_CONTRACT, ntzsabi.ntzsabi, signer);
 
         const encodeFunctionData = tokenContract.interface.encodeFunctionData("mint", functionArgs);
 
@@ -35,14 +35,14 @@ const execute = async () => {
         // Create the meta-transaction request object
         const Req = {
             from: signer.address,
-            to: process.env.CNGN_CONTRACT,
+            to: process.env.NTZS_CONTRACT,
             value: 0,
             gas: 3000000,
             nonce: currentNonce,
             data: encodeFunctionData
         };
         
-        console.log("Meta-transaction request created with target contract:", process.env.CNGN_CONTRACT);
+        console.log("Meta-transaction request created with target contract:", process.env.NTZS_CONTRACT);
 
         // Create the message hash that needs to be signed (must match the contract's implementation)
         const message = ethers.utils.solidityKeccak256(

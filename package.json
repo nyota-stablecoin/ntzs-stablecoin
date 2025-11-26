@@ -1,5 +1,5 @@
 {
-  "name": "cNGN-Token",
+  "name": "nTZS-Token",
   "version": "1.0.0",
   "description": "ERC20 Stablecoin for WrappedCBDC",
   "directories": {
@@ -39,6 +39,6 @@
     "ERC20",
     "Token"
   ],
-  "author": "Charles Okaformbah - cNGN Blockchain Team",
+  "author": "Charles Okaformbah - nTZS Blockchain Team",
   "license": "ISC"
 }
