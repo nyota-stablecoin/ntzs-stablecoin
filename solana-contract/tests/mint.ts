@@ -1,6 +1,6 @@
 import * as anchor from "@coral-xyz/anchor";
 import { Program } from "@coral-xyz/anchor";
-import { Cngn } from "../target/types/cngn";
+import { Ntzs } from "../target/types/Ntzs";
 import { assert, expect } from 'chai';
 import { PublicKey, Keypair } from '@solana/web3.js';
 import { TOKEN_PROGRAM_ID, getAccount } from '@solana/spl-token';
@@ -13,12 +13,12 @@ import {
 } from '../utils/token_initializer';
 import { transferAuthorityToPDA } from "./transfer_authority_to_pda";
 
-describe("cngn mint test", () => {
+describe("ntzs mint test", () => {
   // Configure the client to use the local cluster.
   const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
 
-  const program = anchor.workspace.Cngn as Program<Cngn>;
+  const program = anchor.workspace.Ntzs as Program<Ntzs>;
  const payer = (provider.wallet as anchor.Wallet).payer;
   // Create the mint keypair - this will be the actual token
   const mint = Keypair.generate();
