@@ -1,0 +1,32 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.24"
+optimizer = true
+optimizer_runs = 200
+ffi = true
+ast = true
+build_info = true
+extra_output = ["storageLayout"]
+via_ir = true  # Required for Safe contracts to avoid "stack too deep"
+fs_permissions = [{ access = "read-write", path = "./", globs = ["*.json"] }]
+
+
+remappings = [
+    "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+    "@safe-global/safe-contracts/=lib/safe-contracts/"
+]
+
+[rpc_endpoints]
+mainnet = "${MAINNET_RPC_URL}"
+base_testnet = "${BASE_TESTNET_RPC_URL}"
+bsc_testnet = "${BSC_TESTNET_RPC_URL}"
+localhost = "http://localhost:8545"
+
+[etherscan]
+mainnet = { key = "${ETHERSCAN_API_KEY}" }
+sepolia = { key = "${ETHERSCAN_API_KEY}" }
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
