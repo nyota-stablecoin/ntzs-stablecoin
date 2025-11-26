@@ -56,12 +56,12 @@ nTZS is currently deployed on the following blockchain protocols:
 
 | Network | nTZS Contract Address |
 | ------- | ---------------------- |
-| BANTU   | GD6G2NT7CQHPIYHA52KZHWB6ONNWTSGZOOLTRLRASENM2VWSF6CHYFRX |
-| ASSETCHAIN   | 0x7923C0f6FA3d1BA6EAFCAedAaD93e737Fd22FC4F |
-| BASE       | 0x46C85152bFe9f96829aA94755D9f915F9B10EF5F           |
-| BNBCHAIN   | 0xa8AEA66B361a8d53e8865c62D142167Af28Af058           |
-| ETHEREUM   | 0x17CDB2a01e7a34CbB3DD4b83260B05d0274C8dab           |
-| POLYGON    | 0x52828daa48C1a9A06F37500882b42daf0bE04C3B          |
+| BANTU   |  |
+| ASSETCHAIN   |  |
+| BASE       |            |
+| BNBCHAIN   |            |
+| ETHEREUM   |            |
+| POLYGON    |           |
 
 
 
@@ -69,15 +69,15 @@ nTZS is currently deployed on the following blockchain protocols:
 
 | Network    | nTZS Contract Address                                |
 | ---------- | ---------------------------------------------------- |
-| BANTU      | GAE7E56N3XIC6JGJI54SD3VN4EDY3OZVFA7CLHXAMMTHLU4LIFYJMFSI |
-| ASSETCHAIN | 0x4c00E85cd0B0307D8ED0b5534Bc678776C4aa7D3           |
+| BANTU      | GDRIWHLY5XBLY4WMWTVPBPC367NGHDHJAILR7SUMDB3LWMLKWYNI5LTW |
+| ASSETCHAIN |            |
 | BASE       | 0x19398af7cF46aE7e09261F7Cb6fFC441587E8801           |
 | BNBCHAIN   | 0x48811491dA8E32c3F1929202dC7E4F63fF2Bb971           |
-| ETHEREUM   | 0xd076ceCB8af5D92F7f6F32bDf24Da708859593d3           |
-| POLYGON    | 0xf24B1Cee8cA70341FcefBCa10e7e4Db9A4896486           |
-| LISK       | 0x999E3A32eF3F9EAbF133186512b5F29fADB8a816           |
-| MONAD      | 0x4F90098BA5b08ABAf039b95A851F8e764EB84b49           |
-| ARC        | 0x1716Df6A18DcFF031BFD209aDB8035174AdC0D31           |
+| ETHEREUM   |            |
+| POLYGON    |            |
+| LISK       |            |
+| MONAD      |            |
+| ARC        |            |
 
 ## Developer Guide
 
