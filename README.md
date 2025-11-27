@@ -1,12 +1,13 @@
 # Nyota stablecoin - nTZS
 ## Abstract
-nTZS stands apart as the first regulated stablecoin in Africa. As a fully compliant digital asset, nTZS offers unparalleled trust and transparency, ensuring security for all users, institutions, and businesses.
+nTZS stands apart as one of the first regulated stablecoin in Africa. As a fully compliant digital asset, nTZS offers unparalleled trust and transparency, ensuring security for all users, institutions, and businesses, unnlocking Africa's Largest Digital Assets Economy. We provide next-generation settlement infrastructure that enables Banks, Payment Service Providers (PSPs), and Mobile Network Operators (MNOs) to offer instant international transfers through their existing customer channels. Your customers use familiar interfaces while you leverage our blockchain-powered settlement network for 80% cost reduction and 99% faster processing.
 
-nTZS, fosters the expansion of fintechs, liquidity providers, and virtual asset entities in Tanzania's digital economy. This initiative is bolstered by regulatory approval under the SEC's Regulatory Incubation (RI) Program, significantly contributing to the growth of Tanzania's digital asset ecosystem.
+nTZS, fosters the expansion of fintechs, liquidity providers, and virtual asset entities in Tanzania's digital economy. This initiative is significantly contributing to the growth of Tanzania's digital asset ecosystem.
 
 ## Architecture Overview
 
 The nTZS stablecoin implementation follows a modular architecture with the following key components:
+<img width="1463" height="683" alt="Screenshot 2025-11-27 at 08 54 44" src="https://github.com/user-attachments/assets/87bc8ec0-589f-498d-9806-effd59a04140" />
 
 ### Core Components
 
